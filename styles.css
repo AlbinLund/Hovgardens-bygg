@@ -84,11 +84,11 @@ header {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: clamp(2rem, 5vw, 4rem);
   padding: 3px;
 }
 h2 {
-  font-size: 30px;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: normal;
 }
 
@@ -166,16 +166,23 @@ h4 {
 
 .contact-btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 10px 20px;
   background-color: #4A90E2;
   color: white;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact-btn {
+      font-size: 12px;
+      padding: 8px 16px;
+  }
 }
 
 .contact-btn:hover {
@@ -215,4 +222,61 @@ h6 {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .ul-navbar {
+      flex-direction: column;
+      gap: 10px;
+      padding-right: 0;
+  }
+
+  #ul-contact {
+      width: 100%;
+      height: auto;
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  #hero-section {
+      height: 60vh;
+  }
+
+  h1 {
+      font-size: 50px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  .container {
+      flex-direction: column;
+      gap: 50px;
+  }
+
+  #div-om-oss, #div-om-oss2 {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .lorem, .lorem2 {
+      width: 100%;
+  }
+
+  #img-historia {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
