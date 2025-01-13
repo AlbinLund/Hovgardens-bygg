@@ -148,7 +148,7 @@ h2 {
   height: 70vh;
   gap: 120px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 5px;
 }
 
 @media (max-width: 1000px) {
@@ -238,6 +238,7 @@ h4 {
 #img-historia {
   border-radius: 20%;
   flex: 1 1 40%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -280,7 +281,7 @@ h4 {
   #img-historia {
     border-radius: 20%;
     flex: 1 1 40%;
-    max-width: 90vw;
+    max-width: 80vw;
     height: auto;
   }
 
