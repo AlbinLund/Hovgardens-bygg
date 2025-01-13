@@ -146,9 +146,9 @@ h2 {
   flex-direction: column;
   align-items: center;
   height: 70vh;
-  gap: 120px;
+  gap: 80px;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 20px;
 }
 
 @media (max-width: 1000px) {
@@ -238,7 +238,7 @@ h4 {
 #img-historia {
   border-radius: 20%;
   flex: 1 1 40%;
-  max-width: 40%;
+  max-width: 35%;
   height: auto;
 }
 
