@@ -75,7 +75,8 @@ header {
 
 @media (max-width: 1200px) {
   .logo > img {
-    width: 100px;
+    width: 110px;
+    padding-left: 10px;
   }
 }
 
