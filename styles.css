@@ -84,7 +84,6 @@ header {
   display: flex;
   gap: 15px;
   font-size: 18px;
-  padding-right: 50px;
   white-space: nowrap;
 }
 
@@ -233,19 +232,18 @@ h4 {
   justify-content: center;
   margin: 20px;
   gap: 50px;
+  max-width: 100%;
 }
 
 #img-historia {
   border-radius: 20%;
   flex: 1 1 40%;
-  max-width: 30vw;
   height: auto;
 }
 
 #img-historia2 {
   border-radius: 20%;
   flex: 1 1 40%;
-  max-width: 10vw;
   height: auto;
 }
 
