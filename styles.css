@@ -350,3 +350,13 @@ h6 {
 .ring {
   white-space: nowrap;
 }
+
+#hej {
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+  #hej {
+    padding-bottom: 20px;
+  }
+}
