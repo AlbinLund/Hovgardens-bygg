@@ -9,6 +9,7 @@
 body {
   background-color: #f0f0f0;
   font-family: 'Lato', sans-serif;
+  overflow: overlay;
 }
 
 #page-wrapper {
@@ -107,6 +108,12 @@ header {
   position: relative
 }
 
+@media (max-width: 1200px) {
+  #hero-section {
+    height: 80vh;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -147,8 +154,8 @@ h2 {
 @media (max-width: 1200px) {
   #div-tjänster {
     gap: 50px;
-    height: 165vh;
-    padding-top: 40px;
+    height: 157vh;
+    padding-top: 10px;
   }
 }
 
@@ -338,4 +345,8 @@ h6 {
   text-wrap: wrap;
   width: 100px;
   padding-bottom: 10px;
+}
+
+.ring {
+  white-space: nowrap;
 }
