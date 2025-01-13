@@ -351,12 +351,22 @@ h6 {
   white-space: nowrap;
 }
 
-#hej {
+.hej {
   padding-bottom: 50px;
 }
 
 @media (max-width: 1200px) {
-  #hej {
+  .hej {
     padding-bottom: 20px;
+  }
+}
+
+.hej2 {
+  padding: 70px;
+}
+
+@media (max-width: 1200px) {
+  .hej2 {
+    padding: 20px;
   }
 }
