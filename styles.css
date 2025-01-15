@@ -214,7 +214,7 @@ h4 {
 .dekal {
   width: 90px;
   height: 90px;
-  background-color: #4A90E2;
+  background-color: cornflowerblue;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -225,8 +225,6 @@ h4 {
   .dekal {
     width: 75px;
     height: 75px;
-    background-color: #4A90E2;
-    border-radius: 50%;
   }
 }
 
@@ -260,8 +258,8 @@ h4 {
 }
 
 #div-om-oss {
-  flex: 1 1 50%; /* Texten tar 50% av bredden */
-  max-width: 400px; /* Maximal bredd */
+  flex: 1 1 50%;
+  max-width: 400px;
   row-gap: 50px;
 }
 
@@ -311,7 +309,7 @@ h4 {
 .contact-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4A90E2;
+  background-color: cornflowerblue;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -381,12 +379,65 @@ h6 {
 /* Footer */
 
 footer {
+  margin-top: 10px;
   display: flex;
   justify-content: end;
-  background-color: #4A90E2;
+  background-color: cornflowerblue;
 }
 
 footer > p {
   margin: 0.5rem;
   font-size: 8px;
+}
+
+#slider {
+  overflow: hidden;
+  max-width: 45vw;
+  max-height: 85vh;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  float: left;
+  width: 20%;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
