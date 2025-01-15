@@ -60,12 +60,12 @@ header {
 
 }
 
-.logo > img {
+#logga {
   width: 250px;
 }
 
 @media (max-width: 1200px) {
-  .logo > img {
+  #logga {
     width: 90px;
     padding-left: 0px;
   }
