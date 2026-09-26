@@ -1047,6 +1047,20 @@ input:focus,textarea:focus {
   .services-overview .service-card p { font-size:.95rem; max-width:none; }
 }
 
+/* Tjänstesidan delar startsidans kort och ger introduktionen egen luft. */
+.services-page-intro { padding-top:96px; padding-bottom:64px; }
+.services-page-intro h1 { font-size:clamp(3rem,4.6vw,4.6rem); }
+.services-page-intro>p:last-child { margin-top:30px; max-width:580px; line-height:1.85; }
+.services-page-list { padding-top:0; }
+@media(max-width:1050px) {
+  .services-page-intro { padding-top:72px; padding-bottom:48px; }
+}
+@media(max-width:600px) {
+  .services-page-intro { padding-top:56px; padding-bottom:40px; }
+  .services-page-intro h1 { font-size:2.8rem; }
+  .services-page-intro>p:last-child { margin-top:24px; font-size:1rem; }
+}
+
 /* Bilddelen på startsidan: samlad introduktion och lugna bildtexter. */
 .projects-section { padding-block:108px; scroll-margin-top:20px; }
 .projects-heading { max-width:700px; margin-bottom:48px; }
