@@ -1047,6 +1047,38 @@ input:focus,textarea:focus {
   .services-overview .service-card p { font-size:.95rem; max-width:none; }
 }
 
+/* Bilddelen på startsidan: samlad introduktion och lugna bildtexter. */
+.projects-section { padding-block:108px; scroll-margin-top:20px; }
+.projects-heading { max-width:700px; margin-bottom:48px; }
+.projects-heading p { margin-top:24px; max-width:550px; color:var(--muted); line-height:1.8; }
+.projects-section .project-grid { gap:30px; }
+.projects-section figure { background:#fffefb; border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+.projects-section .project-grid img { aspect-ratio:4/5; }
+.projects-section .project-grid figcaption {
+  display:block;
+  padding:22px 24px;
+  font-size:1rem;
+  font-weight:600;
+}
+.projects-footer { margin-top:38px; }
+.projects-footer .text-link { padding-block:10px; font-size:.9rem; }
+@media(max-width:1050px) {
+  .projects-section { padding-block:88px; }
+  .projects-heading { margin-bottom:40px; }
+  .projects-section .project-grid { gap:22px; }
+  .projects-section .project-grid figcaption { padding:20px 18px; font-size:.95rem; }
+}
+@media(max-width:760px) {
+  .projects-section { padding-block:64px; }
+  .projects-heading { margin-bottom:32px; }
+  .projects-heading p { margin-top:20px; }
+  .projects-section .project-grid { gap:28px; }
+  .projects-section .project-grid figure+figure { margin-top:0; }
+  .projects-section .project-grid img { aspect-ratio:4/3; }
+  .projects-section .project-grid figcaption { padding:20px 22px; }
+  .projects-footer { margin-top:28px; }
+}
+
 /* Header: tydlig navigation och direkt kontakt även på mobil. */
 .site-header {
   background:#fffefb;
