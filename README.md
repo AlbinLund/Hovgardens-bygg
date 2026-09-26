@@ -45,7 +45,9 @@ GitHub: https://github.com/AlbinLund/Hovgardens-bygg
 Ladda upp **innehållet i site/** till webbplatsens rotmapp på one.com.
 Själva mappen `site` ska inte bli en undermapp på servern.
 Projektets `scripts/`, `package.json` och `.local/` ska inte publiceras.
-Ingen automatisk publicering är konfigurerad.
+En GitHub Actions-koppling för SFTP är förberedd men automatisk publicering
+är avstängd. Se [DEPLOYMENT.md](DEPLOYMENT.md) för anslutningskontroll,
+första manuell publicering och aktivering.
 
 Nedladdningens befintliga one.com-mappar och serverinställningar finns kvar
 i `site/`. Den äldre GitHub-versionen finns i Git-historiken och som lokal
