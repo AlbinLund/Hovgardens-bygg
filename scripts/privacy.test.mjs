@@ -30,6 +30,20 @@ test('Tidigare analyskakor raderas, andra kakor lämnas orörda', async () => {
   for(const value of writes) {assert.match(value,/Max-Age=0/);assert.match(value,/; Secure/);assert.doesNotMatch(value,/session=/);}
   for(const name of ['_ga','_ga_6M7FV9DL6S','_gid']) assert.ok(writes.some(x=>x.startsWith(name+'=;')&&x.includes('Path=/;')&&x.includes('Domain=.hovgardensbygg.se')));
 });
+test('Alla innehållssidor blockerar externa skript, inbäddningar och bakgrundsanrop', async () => {
+  const expected = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action https://formspree.io";
+  for (const file of files.filter(p=>p!=='google14b43b7a32898a5a.html')) {
+    const html=await fs.readFile('site/'+file,'utf8');
+    const meta=html.match(/<meta http-equiv="Content-Security-Policy" content="([^"]+)">/);
+    assert.equal(meta?.[1],expected, 'Resursskydd saknas: '+file);
+    assert.ok(meta.index < html.indexOf('<script'), 'Skydd ska stå före skript');
+    for (const script of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) {
+      assert.ok(/\bsrc="\/site.js"/.test(script[1]) || /type="application\/ld\+json"/.test(script[1]),'Oväntat körbart skript i '+file);
+    }
+  }
+  const server=await fs.readFile('site/.htaccess','utf8');
+  assert.ok(server.includes('Header always set Content-Security-Policy "'+expected+'"'));
+});
 test('Nya besök får inga kakor och formuläret skickas endast vid inskickning', async () => {
   const document={querySelector:()=>null};
   Object.defineProperty(document,'cookie',{get:()=>'',set:()=>assert.fail('Ingen kaka ska skapas')});

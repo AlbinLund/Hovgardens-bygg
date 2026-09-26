@@ -73,6 +73,12 @@ icke-nödvändiga kakor sätts, att inga analysanrop görs och att gamla
 cachelagrade sidor inte visas. Utan icke-nödvändiga kakor eller liknande
 lagring behövs ingen samtyckesbanner för dem.
 
+Senaste cookiegranskningen och publiceringskontrollen finns i
+[COOKIE-CHECK.md](COOKIE-CHECK.md). HTML och `.htaccess` innehåller nu CSP
+som blockerar externa skript, inbäddningar och bakgrundsanrop. Ladda upp
+även den dolda filen `.htaccess`. Formspree-inskickning och vanliga externa
+länkar tillåts fortfarande. CSP ersätter inte kontroll av serverkakor.
+
 Ägaren behöver också bekräfta att integritetstexten stämmer med faktisk
 hantering av förfrågningar, lagringstider och avtal med one.com/Formspree.
 Formsprees befintliga konto, personuppgiftsbiträdesavtal och skydd vid

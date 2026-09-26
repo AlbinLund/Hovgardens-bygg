@@ -1,4 +1,10 @@
 
+# Blockera externa resurser som kan lägga till spårning. Vanliga länkar påverkas inte.
+# Formuläret får fortfarande skickas till den befintliga kontaktleverantören.
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action https://formspree.io"
+</IfModule>
+
 <If " %{ENV:G1_RUNTIME} == 'static' ">
     <If " -d %{REQUEST_FILENAME} || %{REQUEST_FILENAME} =~ /.*\.php$/ ">
         Require all denied
@@ -10,4 +16,3 @@
         </IfModule>
     </If>
 </If>
-    
