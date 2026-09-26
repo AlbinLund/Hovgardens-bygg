@@ -2,6 +2,8 @@
   "name": "hovgardens-bygg",
   "private": true,
   "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "test": "node --test scripts/privacy.test.mjs",
     "dev": "node scripts/serve.mjs",
     "check": "node scripts/check-site.mjs"
   }
