@@ -986,6 +986,94 @@ input:focus,textarea:focus {
   }
 }
 
+/* Header: tydlig navigation och direkt kontakt även på mobil. */
+.site-header {
+  background:#fffefb;
+  box-shadow:0 3px 18px rgb(38 51 46 / 4%);
+}
+.header-inner {
+  display:grid;
+  grid-template-columns:220px 1fr auto;
+  min-height:108px;
+  gap:32px;
+}
+.brand { width:220px; }
+.brand img { max-height:82px; }
+#main-nav { justify-content:center; gap:6px; }
+#main-nav>a {
+  padding:12px 17px;
+  font-size:.9rem;
+  font-weight:600;
+  border-radius:3px;
+  white-space:nowrap;
+  transition:background .15s;
+}
+#main-nav>a:hover,#main-nav>a[aria-current] {
+  background:#edf0e7;
+  text-decoration:none;
+  color:var(--dark);
+}
+.header-phone {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:58px;
+  padding:9px 22px;
+  border:1px solid var(--dark);
+  border-radius:3px;
+  background:var(--dark);
+  color:white;
+  text-decoration:none;
+}
+.header-phone:hover { background:#334f41; }
+.phone-label { font-size:.66rem; color:#dee6d8; }
+.phone-number { font-size:.98rem; font-weight:700; letter-spacing:.02em; }
+.phone-mobile { display:none; }
+.hero h1 { font-size:clamp(2.65rem,5.3vw,5.2rem); }
+.hero-company {
+  display:block;
+  margin-top:22px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(1.1rem,2vw,1.65rem);
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:.01em;
+}
+@media(max-width:1100px) and (min-width:761px) {
+  .header-inner { grid-template-columns:175px 1fr auto; gap:12px; min-height:94px; }
+  .brand { width:175px; }
+  #main-nav>a { padding:12px 10px; font-size:.82rem; }
+  .header-phone { padding-inline:15px; }
+}
+@media(max-width:760px) {
+  .header-inner {
+    grid-template-columns:minmax(0,1fr) auto auto;
+    gap:10px;
+    min-height:84px;
+  }
+  .brand { width:clamp(130px,27vw,190px); }
+  .brand img { max-height:66px; }
+  .header-phone { min-height:44px; padding:9px 13px; }
+  .phone-label,.phone-number { display:none; }
+  .phone-mobile { display:block; font-size:.8rem; font-weight:700; white-space:nowrap; }
+  .menu-toggle:not([hidden]) { padding:9px 13px; min-height:44px; justify-content:center; }
+  .menu-toggle[aria-expanded="true"] { background:#edf0e7; border-color:var(--dark); }
+  #main-nav {
+    grid-column:1/-1;
+    grid-row:2;
+    align-items:stretch;
+    gap:4px;
+    padding:0 0 18px;
+  }
+  #main-nav>a { border:0; padding:13px 16px; font-size:1rem; }
+  .hero h1 { font-size:clamp(2.35rem,7.7vw,3.8rem); }
+  .hero-company { margin-top:20px; }
+}
+@media(max-width:360px) {
+  .header-inner { width:calc(100% - 24px); gap:7px; }
+  .brand { width:125px; }
+  .header-phone,.menu-toggle:not([hidden]) { padding-inline:10px; }
+}
 @media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior:auto
