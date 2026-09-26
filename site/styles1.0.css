@@ -1,0 +1,862 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: 'Lato', sans-serif;
+  overflow: overlay;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  line-height: 1.6; /* För bättre läsbarhet */
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 70px;
+  background-color: #eee;
+}
+
+#ul-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 48px;
+  width: 40px;
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 5px 0px 5px 0px;
+    justify-content: space-evenly;
+  }
+  
+
+  #ul-contact {
+    font-size: 9px;
+    height: 48px;
+    width: 70px;
+    }
+
+}
+
+#logga {
+  width: 250px;
+}
+
+@media (max-width: 1200px) {
+  #logga {
+    width: 90px;
+    padding-left: 0px;
+  }
+}
+
+.ul-navbar {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 120px;
+  text-align: center;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  color: #000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: cornflowerblue; /* Orange färg vid hover */
+  transform: scale(1.05);
+}
+
+
+
+@media (max-width: 1200px) {
+  .ul-navbar {
+    font-size: 10px;
+    gap: 3px;
+  }
+
+  .nav-link {
+    width: 48px;
+  }
+}
+
+/*Startsida*/
+#hero-section {
+  background-image: url(Bilder/Använda/Hovgården_tak_komp.webp);
+  background-size: cover;
+  background-position-y: 32%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  height: 100%;
+}
+
+.hero-text {
+  display:  flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  z-index: 2;
+}
+
+.tit {
+  font-size: clamp(1.9rem, 4vw, 3.5rem);
+  padding: 3px;
+  font-weight: bold; /* Gör texten fetare */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Lätt skugga för bättre kontrast */
+}
+
+.und-tit {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: normal;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Lätt skugga för bättre kontrast */
+}
+
+.und-tit-2 {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+/*Tjänster*/
+#div-tjänster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 1000px) {
+  #div-tjänster {
+    gap: 50px;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+}
+
+
+.div-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: center;
+  gap: 12px;
+  width: 20vw;
+}
+
+@media (max-width: 1500px) {
+  .div-container {
+    width: 80vw; /* Anpassa bredden efter mindre skärmar */
+    text-align: center;
+  }
+}
+
+.div1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .div1 {
+    gap: 45px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+h3 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  h3 {
+    margin-bottom: 0px;
+  }
+}
+
+
+h4 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+
+
+.dekal {
+  width: 90px;
+  height: 90px;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .dekal {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+/*Om oss*/
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  gap: 50px;
+  max-width: 100%;
+}
+
+#img-historia {
+  border-radius: 20%;
+  flex: 1 1 40%;
+  max-width: 40vw;
+  height: auto;
+}
+
+#img-historia2 {
+  border-radius: 20%;
+  flex: 1 1 40%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  #img-historia2 {
+    display: none;
+  }
+
+  #img-historia {
+    display: none;
+  }
+}
+
+#div-om-oss {
+  flex: 1 1 50%;
+  max-width: 40vw;
+  row-gap: 50px;
+}
+
+.lorem {
+  text-wrap: wrap;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.lorem-3 {
+  font-family: sans-serif;
+  text-wrap: wrap;
+  max-width: 40vw;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.oss {
+  margin-bottom: 10px;
+}
+
+/*Kontakt*/
+#img-historia2 {
+  border-radius: 20%;
+  flex: 1 1 40%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  #img-historia {
+    border-radius: 20%;
+    flex: 1 1 40%;
+    max-width: 80vw;
+    height: auto;
+  }
+
+  .lorem {
+    text-wrap: wrap;
+    max-width: 90vw;
+    margin-bottom: 20px;
+  }
+
+  .lorem-3 {
+    font-size: 8px;
+    max-width: 60vw;
+    padding: 8px;
+  }
+
+  #img-historia2 {
+    border-radius: 20%;
+    flex: 1 1 40%;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+.white {
+  color: white;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 30px;
+}
+
+.contact-btn:hover {
+  background-color: #2686f3;
+  transform: translateY(-2px);
+}
+
+.contact-btn:active {
+  transform: translateY(0);
+}
+
+.ex-text {
+  width: 400px;
+}
+
+@media (max-width: 1200px) {
+  .ex-text {
+    width: 220px;
+  }
+}
+
+.lorem2 {
+  text-wrap: wrap;
+  width: 100px;
+  padding-bottom: 10px;
+}
+
+.ring {
+  white-space: nowrap;
+}
+
+.hej {
+  padding-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .hej {
+    padding-bottom: 20px;
+  }
+}
+
+.hej2 {
+  padding: 30px;
+}
+
+@media (max-width: 1200px) {
+  .hej2 {
+    padding: 20px;
+  }
+}
+
+/* Footer */
+
+footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  background-color: cornflowerblue;
+}
+
+footer > p {
+  margin: 0.5rem;
+  font-size: 8px;
+}
+
+.sm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.swiper {
+  width: 70vw;
+  height: 70vh; 
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider {
+  margin: 50px 0;
+}
+
+.und-tit-1 {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-weight: bold;
+}
+
+
+#hero-section-1 {
+  background-image: url(Bilder/Nybyggnation/Nybyggnation12.webp);
+  background-size: cover;
+  background-position-y: 22%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-section-2 {
+  background-image: url(Bilder/Nybyggnation/Nybyggnation2.webp);
+  background-size: cover;
+  background-position-y: 56%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-section-3 {
+  background-image: url(Bilder/Nybyggnation/Nybyggnation5.webp);
+  background-size: cover;
+  background-position-y: 50%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+#hero-section-4 {
+  background-image: url(Bilder/Nybyggnation/Nybyggnation22.webp);
+  background-size: cover;
+  background-position-y: 58%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-section-5 {
+  background-image: url(Bilder/Renovering/Renovering1.webp);
+  background-size: cover;
+  background-position-y: 55%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-section-6 {
+  background-image: url(Bilder/Tillbyggnad/Tillbyggnad5.webp);
+  background-size: cover;
+  background-position-y: 20%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-section-7 {
+  background-image: url(Bilder/Tak/Tak11.webp);
+  background-size: cover;
+  background-position-y: 25%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+#hero-section-8 {
+  background-image: url(Bilder/Renovering/Renovering2.webp);
+  background-size: cover;
+  background-position-y: 52%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+  .und-tit-2 {
+    font-weight: bold;
+    max-width: 310px;
+  }
+
+  #hero-section-1, #hero-section-2, #hero-section-3, #hero-section-4, #hero-section-5, #hero-section-6, #hero-section-7, #hero-section-8 {
+    height: 30vh;
+  } 
+
+
+
+}
+
+@media (max-width: 1200px) {
+  .swiper {
+    width: 90vw;
+  }
+
+  
+}
+
+
+
+/* Dropdown-meny */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #eee;
+  display: none; /* Göm dropdown-menyn som standard */
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 3000; /* Se till att dropdown visas över andra element */
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  color: cornflowerblue;
+}
+
+/* Visa dropdown-menyn när man hovrar eller klickar på dropdown */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* Stil för pilen */
+.dropdown-arrow {
+  font-size: 14px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Pil roteras vid hover */
+.dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1200px) {
+  .dropdown-menu {
+    position: absolute; /* Se till att den är placerad korrekt */
+    top: 100%; /* Ligger precis under knappen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #eee;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3000;
+    width: max-content;
+    min-width: 160px;
+    display: none; /* Dold som standard */
+}
+
+
+  .dropdown-arrow {
+    font-size: 8px;
+  }
+}
+
+/* Hover-effekt för alla länkar */
+a:hover {
+  color: #6495ED; /* Cornflowerblue */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Förstärk effekten på navigeringslänkar */
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+/* För dropdown-menyn */
+.dropdown-menu a:hover {
+  background-color: #ddd;
+  color: #6495ED;
+}
+
+.contact-btn:hover {
+  color: white; /* Behåller sin ursprungliga färg */
+  background-color: cornflowerblue; /* Alternativt: Behåll samma blåa färg */
+  transform: translateY(-2px); /* Behåller den befintliga lyfteffekten */
+}
+
+.lorem4 {
+  text-wrap: wrap;
+  width: 50vw;
+  padding-bottom: 60px;
+  
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 40vw;
+  transition: transform 0.3s ease;
+}
+
+.card2 {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 60vw;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding-bottom: 10px;
+}
+
+.card2 h3 {
+  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding-bottom: 10px;
+}
+
+.vara {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: bold;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .vara {
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
+
+  .card2 {
+    width: 80vw;
+  }
+}
+
+.vara2 {
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  line-height: 1.6; /* För bättre läsbarhet */
+  width: 60vw;
+}
+
+.tit-var {
+  font-size: clamp(1.4rem, 3vw, 3rem);
+  padding: 3px;
+  font-weight: bold; /* Gör texten fetare */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Lätt skugga för bättre kontrast */
+}
+
+
+.container {
+  width: 40vw;
+  padding: 20px;
+  background: cornflowerblue;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  background-color: #333;
+}
+
+.container-kont {
+  display: flex;
+  flex-wrap: wrap; /* Ser till att de staplas på mindre skärmar */
+  justify-content: space-between; /* Jämnt avstånd */
+  align-items: flex-start; /* Justerar element upptill */
+  gap: 30px; /* Mellanrum mellan boxarna */
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+  
+}
+
+.kont {
+  flex: 1; /* Gör att de delar utrymmet lika */
+  min-width: 20vw; /* Hindrar att de blir för smala */
+  max-width: 70vw; /* Begränsar bredden */
+  padding: 20px;
+  color: black;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 1200px) {
+  .container-kont {
+    max-width: 90%;
+    
+  }
+
+  .kont {
+    min-width: 50vw; /* Hindrar att de blir för smala */
+  max-width: 80vw; /* Begränsar bredden */
+  }
+}
+
+.card3 {
+  width: 25vw;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .card3 {
+    width: 80vw;
+
+  }
+}
+
+.card3 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content3 {
+  padding: 20px;
+}
+
+.card-content3 h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-content3 p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.card-container3 {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
